@@ -1,5 +1,7 @@
 # Fuck MIUI Gesture
 
+[![Build status](https://build.appcenter.ms/v0.1/apps/522a086b-c255-4ee7-9978-49495cacca27/branches/main/badge)](https://appcenter.ms)
+
 ## English Brief
 
 Enable this module to force using gesture navigation bar in MIUI all the time.
