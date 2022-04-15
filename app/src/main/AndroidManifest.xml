@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.hcgstudio.miui.fuck.gesture">
+
+    <application
+            android:allowBackup="true"
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/Theme.FuckMiuiGesture">
+        <meta-data
+                android:name="xposedmodule"
+                android:value="true" />
+
+        <meta-data
+                android:name="xposeddescription"
+                android:value="Force enable gesture for third-party launcher in MIUI." />
+
+        <meta-data
+                android:name="xposedminversion"
+                android:value="93" />
+
+        <meta-data
+                android:name="xposedscope"
+                android:resource="@array/module_scope" />
+    </application>
+
+</manifest>
