@@ -4,7 +4,7 @@
 
 ## English Brief
 
-Enable this module to force using gesture navigation bar in MIUI all the time.
+Enable this module to force using gesture navigation in MIUI all the time.
 
 # 说明
 
