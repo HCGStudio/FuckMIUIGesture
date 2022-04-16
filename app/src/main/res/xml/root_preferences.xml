@@ -1,0 +1,18 @@
+<PreferenceScreen
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+            app:title="@string/main_header">
+        <SwitchPreference app:key="strong_mode"
+                          app:title="@string/strong_mode"
+                          app:summary="@string/strong_mode_desc"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            app:title="@string/utils_header">
+        <Preference
+                app:key="restart"
+                app:title="@string/restart_system_ui"
+                app:summary="@string/restart_system_ui_desc"/>
+    </PreferenceCategory>
+</PreferenceScreen>
