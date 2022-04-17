@@ -2,13 +2,12 @@
     <string name="app_name">FuckMiuiGesture</string>
     <string name="title_activity_settings">Settings</string>
     <string name="name_activity_settings">Gesture Settings</string>
-
     <string name="main_header">Main</string>
     <string name="strong_mode">Strong Mode</string>
     <string name="strong_mode_desc">Use gesture navigation all the time.</string>
-
     <string name="restart_system_ui">Restart System UI</string>
     <string name="restart_system_ui_desc">Restart System UI and MIUI home now.</string>
     <string name="utils_header">Utils</string>
-
+    <string name="open_setting">System Navigation Settings</string>
+    <string name="open_setting_desc">Open System Navigation Setting Page</string>
 </resources>

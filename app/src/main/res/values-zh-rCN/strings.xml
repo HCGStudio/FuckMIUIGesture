@@ -9,4 +9,6 @@
     <string name="restart_system_ui">重启系统UI</string>
     <string name="restart_system_ui_desc">立即重启系统UI和系统桌面，使设置生效</string>
     <string name="utils_header">工具</string>
+    <string name="open_setting">系统导航设置</string>
+    <string name="open_setting_desc">打开系统导航设置界面</string>
 </resources>

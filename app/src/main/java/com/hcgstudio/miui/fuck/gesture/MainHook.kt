@@ -1,9 +1,11 @@
 package com.hcgstudio.miui.fuck.gesture
 
+import android.content.Intent
 import com.highcapable.yukihookapi.YukiHookAPI
 import com.highcapable.yukihookapi.annotation.xposed.InjectYukiHookWithXposed
 import com.highcapable.yukihookapi.hook.type.java.BooleanType
 import com.highcapable.yukihookapi.hook.xposed.proxy.YukiHookXposedInitProxy
+
 
 @InjectYukiHookWithXposed(modulePackageName = "com.hcgstudio.miui.fuck.gesture")
 class MainHook : YukiHookXposedInitProxy {
@@ -41,6 +43,25 @@ class MainHook : YukiHookXposedInitProxy {
             }
 
             loadApp(name = "com.miui.home") {
+                findClass("androidx.preference.Preference").hook {
+                    injectMember {
+                        method {
+                            name = "setIntent"
+                            beforeHook {
+                                val old = args(0).any() as Intent
+                                if (old.action == "com.miui.home.action.navigation_bar_type_settings") {
+                                    val intent = Intent()
+                                    intent.setClassName(
+                                        "com.hcgstudio.miui.fuck.gesture",
+                                        "com.hcgstudio.miui.fuck.gesture.SettingsActivity"
+                                    )
+                                    args(0).set(intent)
+                                }
+                            }
+                        }
+                    }
+                }
+
                 findClass("com.miui.home.launcher.common.Utilities").hook {
                     injectMember {
                         method {
@@ -48,6 +69,21 @@ class MainHook : YukiHookXposedInitProxy {
                             returnType = BooleanType
                         }
                         replaceToTrue()
+                    }
+                }
+            }
+
+            loadApp(name = "com.miui.voiceassist") {
+                findClass("android.provider.Settings\$Global").hook {
+                    injectMember {
+                        method {
+                            name = "putInt"
+                        }
+                        beforeHook {
+                            if (args(1).string() == "force_fsg_nav_bar") {
+                                args(2).set(1)
+                            }
+                        }
                     }
                 }
             }

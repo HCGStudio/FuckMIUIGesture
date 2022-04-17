@@ -11,6 +11,10 @@
     <PreferenceCategory
             app:title="@string/utils_header">
         <Preference
+                app:key="settings"
+                app:title="@string/open_setting"
+                app:summary="@string/open_setting_desc"/>
+        <Preference
                 app:key="restart"
                 app:title="@string/restart_system_ui"
                 app:summary="@string/restart_system_ui_desc"/>
