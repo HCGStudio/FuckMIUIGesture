@@ -1,5 +1,6 @@
 package com.hcgstudio.miui.fuck.gesture
 
+import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.Preference
@@ -21,12 +22,11 @@ class SettingsActivity : AppCompatActivity() {
                 .commit()
         }
         supportActionBar?.setDisplayHomeAsUpEnabled(false)
-        PreferenceManager.getDefaultSharedPreferences(this)
-            .registerOnSharedPreferenceChangeListener { sharedPreferences, key ->
-                if (key == "strong_mode") {
-                    modulePrefs.putBoolean("strong_mode", sharedPreferences.getBoolean("strong_mode", false))
-                }
-            }
+
+        try {
+            this.getSharedPreferences("${this.packageName}_preferences", Context.MODE_WORLD_READABLE)
+        } catch (_: SecurityException) {
+        }
     }
 
 

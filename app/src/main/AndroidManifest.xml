@@ -12,7 +12,7 @@
         <activity
                 android:name=".SettingsActivity"
                 android:exported="true"
-                android:label="@string/title_activity_settings">
+                android:label="@string/name_activity_settings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

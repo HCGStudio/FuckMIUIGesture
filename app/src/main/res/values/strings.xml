@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">FuckMiuiGesture</string>
     <string name="title_activity_settings">Settings</string>
+    <string name="name_activity_settings">Gesture Settings</string>
 
     <string name="main_header">Main</string>
     <string name="strong_mode">Strong Mode</string>

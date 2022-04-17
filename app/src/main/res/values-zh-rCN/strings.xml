@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">强制使用MIUI手势</string>
+    <string name="name_activity_settings">手势设置</string>
     <string name="title_activity_settings">设置</string>
     <string name="main_header">主要设置</string>
     <string name="strong_mode">暴力模式</string>

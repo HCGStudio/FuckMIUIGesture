@@ -20,8 +20,10 @@ class MainHook : YukiHookXposedInitProxy {
                     }
                 }
 
+                val strongMode = prefs.get(DataConst.STRONG_MODE_DATA)
+
                 //Strong mode hook
-                if (prefs.getBoolean("strong_mode")) {
+                if (strongMode) {
                     findClass("android.provider.MiuiSettings\$Global").hook {
                         injectMember {
                             method {
