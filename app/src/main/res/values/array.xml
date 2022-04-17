@@ -3,5 +3,6 @@
     <string-array name="module_scope">
         <item>com.android.systemui</item>
         <item>com.miui.home</item>
+        <item>com.miui.voiceassist</item>
     </string-array>
 </resources>
